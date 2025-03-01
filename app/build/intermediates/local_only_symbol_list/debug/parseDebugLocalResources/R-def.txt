@@ -21,7 +21,9 @@ id bottomNav
 id et_email
 id et_password
 id farmerListView
+id foodItemList
 id img_farmer
+id img_foodItem
 id login
 id logout
 id main
@@ -32,6 +34,7 @@ id nav_host_fragment
 id nav_login
 id nav_profile
 id nav_search
+id tv_FoodItemName
 id tv_farmer_name
 id tv_signup
 layout activity_main
@@ -43,6 +46,7 @@ layout fragment_profile
 layout fragment_profile_unlogined
 layout fragment_search
 layout item_farmer
+layout item_fooditem
 menu nav_items
 menu search_menu
 mipmap ic_launcher
