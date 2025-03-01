@@ -6,6 +6,7 @@ color light_green
 color white
 drawable btn_background
 drawable chat
+drawable circle_bg
 drawable home
 drawable ic_launcher_background
 drawable ic_launcher_foreground
@@ -18,6 +19,8 @@ id action_profile_to_login
 id bottomNav
 id et_email
 id et_password
+id farmerListView
+id img_farmer
 id login
 id logout
 id main
@@ -28,6 +31,7 @@ id nav_host_fragment
 id nav_login
 id nav_profile
 id nav_search
+id tv_farmer_name
 id tv_signup
 layout activity_main
 layout activity_splash_screen
@@ -37,6 +41,7 @@ layout fragment_login
 layout fragment_profile
 layout fragment_profile_unlogined
 layout fragment_search
+layout item_farmer
 menu nav_items
 mipmap ic_launcher
 mipmap ic_launcher_round

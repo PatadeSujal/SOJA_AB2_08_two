@@ -3111,6 +3111,7 @@ int drawable btn_radio_off_to_on_mtrl_animation 0x7f08007f
 int drawable btn_radio_on_mtrl 0x7f080080
 int drawable btn_radio_on_to_off_mtrl_animation 0x7f080081
 int drawable chat 0x7f080082
+int drawable circle_bg 0x7f080107
 int drawable common_full_open_on_phone 0x7f080083
 int drawable common_google_signin_btn_icon_dark 0x7f080084
 int drawable common_google_signin_btn_icon_dark_focused 0x7f080085
@@ -3448,6 +3449,7 @@ int id exitUntilCollapsed 0x7f0900c5
 int id expand_activities_button 0x7f0900c6
 int id expanded_menu 0x7f0900c7
 int id fade 0x7f0900c8
+int id farmerListView 0x7f09022b
 int id fill 0x7f0900c9
 int id fill_horizontal 0x7f0900ca
 int id fill_vertical 0x7f0900cb
@@ -3492,6 +3494,7 @@ int id ifRoom 0x7f0900f1
 int id ignore 0x7f0900f2
 int id ignoreRequest 0x7f0900f3
 int id image 0x7f0900f4
+int id img_farmer 0x7f09022c
 int id immediateStop 0x7f0900f5
 int id included 0x7f0900f6
 int id indeterminate 0x7f0900f7
@@ -3770,6 +3773,7 @@ int id transition_position 0x7f090204
 int id transition_scene_layoutid_cache 0x7f090205
 int id transition_transform 0x7f090206
 int id triangle 0x7f090207
+int id tv_farmer_name 0x7f09022d
 int id tv_signup 0x7f090227
 int id unchecked 0x7f090208
 int id uniform 0x7f090209
@@ -3941,6 +3945,7 @@ int layout fragment_profile_unlogined 0x7f0c0074
 int layout fragment_search 0x7f0c0034
 int layout ime_base_split_test_activity 0x7f0c0035
 int layout ime_secondary_split_test_activity 0x7f0c0036
+int layout item_farmer 0x7f0c0076
 int layout m3_alert_dialog 0x7f0c0037
 int layout m3_alert_dialog_actions 0x7f0c0038
 int layout m3_alert_dialog_title 0x7f0c0039

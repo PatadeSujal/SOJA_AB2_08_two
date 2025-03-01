@@ -3112,6 +3112,7 @@ drawable btn_radio_off_to_on_mtrl_animation
 drawable btn_radio_on_mtrl
 drawable btn_radio_on_to_off_mtrl_animation
 drawable chat
+drawable circle_bg
 drawable common_full_open_on_phone
 drawable common_google_signin_btn_icon_dark
 drawable common_google_signin_btn_icon_dark_focused
@@ -3449,6 +3450,7 @@ id exitUntilCollapsed
 id expand_activities_button
 id expanded_menu
 id fade
+id farmerListView
 id fill
 id fill_horizontal
 id fill_vertical
@@ -3493,6 +3495,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id img_farmer
 id immediateStop
 id included
 id indeterminate
@@ -3771,6 +3774,7 @@ id transition_position
 id transition_scene_layoutid_cache
 id transition_transform
 id triangle
+id tv_farmer_name
 id tv_signup
 id unchecked
 id uniform
@@ -3942,6 +3946,7 @@ layout fragment_profile_unlogined
 layout fragment_search
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
+layout item_farmer
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
 layout m3_alert_dialog_title
