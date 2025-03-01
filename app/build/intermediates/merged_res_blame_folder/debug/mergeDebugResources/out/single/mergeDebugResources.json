@@ -24,6 +24,10 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\drawable\\input_background.xml"
     },
     {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\menu_search_menu.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\menu\\search_menu.xml"
+    },
+    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\raw_farmer.json.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\raw\\farmer.json"
     },
@@ -64,10 +68,6 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "com.soja.consumerapp-debug-5:/layout_item_farmer.xml.flat",
-        "source": "com.soja.consumerapp-main-7:/layout/item_farmer.xml"
-    },
-    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\mipmap-hdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\mipmap-hdpi\\ic_launcher_round.webp"
     },
@@ -92,16 +92,20 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
     {
-        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\layout_item_farmer.xml.flat",
-        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\layout\\item_farmer.xml"
-    },
-    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\mipmap-xxhdpi_ic_launcher.webp.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\mipmap-xxhdpi\\ic_launcher.webp"
     },
     {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\layout_item_farmer.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\layout\\item_farmer.xml"
+    },
+    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\xml_data_extraction_rules.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\xml\\data_extraction_rules.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\layout_item_fooditem.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\layout\\item_fooditem.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\drawable_chat.png.flat",
@@ -142,5 +146,9 @@
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\drawable_btn_background.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\drawable\\btn_background.xml"
+    },
+    {
+        "merged": "com.soja.consumerapp-debug-5:/layout_item_fooditem.xml.flat",
+        "source": "com.soja.consumerapp-main-7:/layout/item_fooditem.xml"
     }
 ]
