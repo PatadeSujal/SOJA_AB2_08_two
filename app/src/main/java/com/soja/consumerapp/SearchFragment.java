@@ -14,8 +14,15 @@ import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import androidx.appcompat.widget.SearchView;
+import androidx.recyclerview.widget.GridLayoutManager;
+import androidx.recyclerview.widget.RecyclerView;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class SearchFragment extends Fragment {
+
+    RecyclerView foodItemList;
 
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
@@ -58,6 +65,18 @@ public class SearchFragment extends Fragment {
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_search, container, false);
+        View root =  inflater.inflate(R.layout.fragment_search, container, false);
+
+        foodItemList = root.findViewById(R.id.foodItemList);
+        List<FoodItemModel> foodList = new ArrayList<>();
+        foodList.add(new FoodItemModel("Apple","", "100","it is sweet"));
+        foodList.add(new FoodItemModel("Banana","", "120","it is sweet"));
+
+        FoodItemAdapter adapter = new FoodItemAdapter(foodList);
+
+        foodItemList.setLayoutManager(new GridLayoutManager(getContext(),2));
+        foodItemList.setAdapter(adapter);
+
+        return root;
     }
 }
