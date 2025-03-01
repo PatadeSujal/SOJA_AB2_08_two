@@ -1,14 +1,17 @@
 package com.soja.consumerapp;
 
-public class FoodItemModel {
-    String image, name, price, description;
+import java.io.Serializable;
 
-    FoodItemModel(String n, String i, String p, String d)
+public class FoodItemModel implements Serializable {
+    String image, name, price, description,seller;
+
+    FoodItemModel(String n, String d, String p, String i, String s)
     {
         name = n;
         image = i;
         price = p;
         description = d;
+        seller = s;
     }
 
     public String getName() {
@@ -26,4 +29,5 @@ public class FoodItemModel {
     public String getImage() {
         return image;
     }
+    public String getSeller() {return seller;}
 }

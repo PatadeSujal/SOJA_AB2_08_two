@@ -7,6 +7,7 @@ import androidx.annotation.Nullable;
 import androidx.core.view.MenuProvider;
 import androidx.fragment.app.Fragment;
 
+import android.os.Parcelable;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -16,12 +17,15 @@ import android.view.ViewGroup;
 import android.widget.Toast;
 
 import androidx.appcompat.widget.SearchView;
+import androidx.fragment.app.FragmentManager;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
 import com.google.firebase.firestore.FirebaseFirestore;
 import com.google.firebase.firestore.QueryDocumentSnapshot;
 
+import java.io.Serializable;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
@@ -31,6 +35,8 @@ public class SearchFragment extends Fragment {
     RecyclerView foodItemList;
     FirebaseFirestore firestore;
     private FarmerAdapter.OnFarmerClickListener listener;
+    List<FoodItemModel> foodList = new ArrayList<>();
+    FoodItemAdapter adapter;
 
     public interface OnFarmerClickListener {
         void onFarmerClick(FarmerModel farmer);
@@ -53,7 +59,38 @@ public class SearchFragment extends Fragment {
                 searchView.setOnQueryTextListener(new SearchView.OnQueryTextListener() {
                     @Override
                     public boolean onQueryTextSubmit(String query) {
-                        // Handle search submit (e.g., filter list)
+
+                        firestore.collection("MarketPlace").get().addOnCompleteListener(task->{
+                            if(task.isSuccessful())
+                            {
+                                foodList.clear();
+                                for(QueryDocumentSnapshot document : task.getResult())
+                                {
+                                    for (String key : document.getData().keySet())
+                                    {
+                                        Object value = document.get(key);
+                                        if (value instanceof List) { // Check if it's an array
+                                            List<String> productData = (List<String>) value;
+
+                                            if (productData.size() >= 4) {
+                                                foodList.add(new FoodItemModel(
+                                                        productData.get(0), // Name
+                                                        productData.get(1), // Description
+                                                        productData.get(2), // Price
+                                                        productData.get(3),  // Image URL
+                                                        document.getId()
+                                                ));
+                                            }
+                                        }
+                                    }
+                                    adapter.notifyDataSetChanged();
+                                }
+                            }
+                            else
+                            {
+                                Toast.makeText(getContext(), "check your internet", Toast.LENGTH_SHORT).show();
+                            }
+                        });
                         return false;
                     }
 
@@ -80,20 +117,34 @@ public class SearchFragment extends Fragment {
         firestore = FirebaseFirestore.getInstance();
 
         foodItemList = root.findViewById(R.id.foodItemList);
-        List<FoodItemModel> foodList = new ArrayList<>();
 
-
-        FoodItemAdapter adapter = new FoodItemAdapter(foodList, getContext(), foodItem-> {
-                Toast.makeText(getContext(), "Clicked" + foodItem.getName(), Toast.LENGTH_SHORT).show();
+        adapter = new FoodItemAdapter(foodList, getContext(), foodItem-> {
+            gotoDetailedView(foodItem);
         });
 
         firestore.collection("MarketPlace").get().addOnCompleteListener(task->{
             if(task.isSuccessful())
             {
+                foodList.clear();
                 for(QueryDocumentSnapshot document : task.getResult())
                 {
-                    Map<String,Object> data = document.getData();
-                    foodList.add(new FoodItemModel(data.get("name").toString(),"", data.get("pricePerKg").toString(),"it is sweet"));
+                    for (String key : document.getData().keySet())
+                    {
+                        Object value = document.get(key);
+                        if (value instanceof List) { // Check if it's an array
+                            List<String> productData = (List<String>) value;
+
+                            if (productData.size() >= 4) {
+                                foodList.add(new FoodItemModel(
+                                        productData.get(0), // Name
+                                        productData.get(1), // Description
+                                        productData.get(2), // Price
+                                        productData.get(3),  // Image URL
+                                        document.getId()
+                                ));
+                            }
+                        }
+                    }
                     adapter.notifyDataSetChanged();
                 }
             }
@@ -103,5 +154,14 @@ public class SearchFragment extends Fragment {
         foodItemList.setAdapter(adapter);
 
         return root;
+    }
+
+
+    public void gotoDetailedView(FoodItemModel fm)
+    {
+        Bundle data = new Bundle();
+        data.putSerializable("foodItem", (Serializable) fm);
+        Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.action_search_to_detailed,data);
+
     }
 }

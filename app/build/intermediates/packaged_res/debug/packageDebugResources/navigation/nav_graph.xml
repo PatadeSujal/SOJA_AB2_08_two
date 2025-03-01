@@ -16,8 +16,13 @@
         android:id="@+id/nav_search"
         android:label="Search"
         android:name="com.soja.consumerapp.SearchFragment"
-        tools:layout="@layout/fragment_search"
-        />
+        tools:layout="@layout/fragment_search">
+
+        <action
+            android:id="@+id/action_search_to_detailed"
+            app:destination="@id/nav_detailed"/>
+
+    </fragment>
 
     <fragment
         android:id="@+id/nav_chat"
@@ -25,8 +30,6 @@
         android:name="com.soja.consumerapp.ChatFragment"
         tools:layout="@layout/fragment_chat"
         />
-
-
 
     <fragment
         android:id="@+id/nav_profile"
@@ -41,6 +44,10 @@
         <action
             android:id="@+id/action_profile_to_login"
             app:destination="@id/nav_login"/>
+
+        <action
+            android:id="@+id/action_profile_to_signup"
+            app:destination="@id/nav_signup"/>
     </fragment>
 
     <fragment
@@ -53,5 +60,24 @@
             android:id="@+id/action_login_to_home"
             app:destination="@id/nav_home"/>
     </fragment>
+
+    <fragment
+        android:id="@+id/nav_signup"
+        android:label="Sign Up"
+        android:name="com.soja.consumerapp.SignUpFragment"
+        tools:layout="@layout/fragment_sign_up"
+        >
+        <action
+            android:id="@+id/action_signup_to_home"
+            app:destination="@id/nav_home"/>
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_detailed"
+        android:label="Detailed"
+        android:name="com.soja.consumerapp.DetailedFragment"
+        tools:layout="@layout/fragment_detailed"
+        />
+
 
 </navigation>

@@ -26,10 +26,10 @@ public class ChatFragment extends Fragment {
         farmerListView = root.findViewById(R.id.farmerListView);
         farmerListView.setLayoutManager(new LinearLayoutManager(getContext()));
 
-        List<FarmerModel> farmerList = new ArrayList<>();
+        List farmerList = MainActivity.FarmerChatList;
         farmerList.add(new FarmerModel("Farmer A", ""));
-        farmerList.add(new FarmerModel("Farmer B", ""));
-        farmerList.add(new FarmerModel("Farmer C", ""));
+        //farmerList.add(new FarmerModel("Farmer B", ""));
+
 
         FarmerAdapter farmerAdapter = new FarmerAdapter(farmerList, new FarmerAdapter.OnFarmerClickListener() {
             @Override
@@ -39,6 +39,7 @@ public class ChatFragment extends Fragment {
         });
 
         farmerListView.setAdapter(farmerAdapter);
+        farmerAdapter.notifyDataSetChanged();
 
 
 

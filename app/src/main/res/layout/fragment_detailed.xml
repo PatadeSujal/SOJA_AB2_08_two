@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:layout_margin="20dp"
+    tools:context=".DetailedFragment">
+
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/name"
+        android:textSize="24dp"
+        android:text="Apple" />
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="250dp"
+        android:layout_margin="20dp"
+        android:id="@+id/image"
+        android:src="@drawable/ic_launcher_background"
+        android:layout_below="@id/name"
+        />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/price"
+        android:textSize="22dp"
+        android:layout_margin="20dp"
+        android:layout_below="@id/image"
+        android:text="₹100/kg" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/desc"
+        android:textSize="16dp"
+        android:layout_marginHorizontal="20dp"
+        android:text="This is a Apple"
+        android:layout_below="@id/price"/>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:id="@+id/farmer"
+        android:textSize="16dp"
+        android:layout_margin="20dp"
+        android:text="Sold by Farmer A"
+        android:layout_below="@id/desc"/>
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:id="@+id/negotiate"
+        android:textSize="22dp"
+        android:layout_marginHorizontal="20dp"
+        android:layout_above="@+id/buy"
+        android:text="Negotiate" />
+
+    <Button
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="bottom"
+        android:id="@+id/buy"
+        android:textSize="22dp"
+        android:layout_margin="20dp"
+        android:layout_alignParentBottom="true"
+        android:text="Buy Now" />
+
+</RelativeLayout>

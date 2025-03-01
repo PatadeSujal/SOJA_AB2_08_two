@@ -20,6 +20,10 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\layout\\activity_main.xml"
     },
     {
+        "merged": "com.soja.consumerapp-debug-5:/layout_activity_main.xml.flat",
+        "source": "com.soja.consumerapp-main-7:/layout/activity_main.xml"
+    },
+    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\drawable_input_background.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\drawable\\input_background.xml"
     },
@@ -66,6 +70,14 @@
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\mipmap-xxxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\mipmap-xxxhdpi\\ic_launcher_round.webp"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\layout_fragment_detailed.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\layout\\fragment_detailed.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\layout_fragment_sign_up.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\layout\\fragment_sign_up.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\mipmap-hdpi_ic_launcher_round.webp.flat",
@@ -146,9 +158,5 @@
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\drawable_btn_background.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\drawable\\btn_background.xml"
-    },
-    {
-        "merged": "com.soja.consumerapp-debug-5:/layout_item_fooditem.xml.flat",
-        "source": "com.soja.consumerapp-main-7:/layout/item_fooditem.xml"
     }
 ]

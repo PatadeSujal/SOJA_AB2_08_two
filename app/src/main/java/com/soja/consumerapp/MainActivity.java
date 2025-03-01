@@ -14,9 +14,12 @@ import androidx.navigation.ui.NavigationUI;
 
 import com.google.android.material.bottomnavigation.BottomNavigationView;
 
+import java.util.ArrayList;
+
 public class MainActivity extends AppCompatActivity {
 
     BottomNavigationView bottomNav;
+    static ArrayList<FarmerModel> FarmerChatList = new ArrayList<FarmerModel>();
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {

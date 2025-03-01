@@ -1,22 +1,19 @@
 <?xml version="1.0" encoding="utf-8"?>
-<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/light_green"
+    android:gravity="center_horizontal"
+    android:paddingTop="150dp"
     tools:context=".LoginFragment">
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:orientation="vertical"
-        android:background="@color/light_green"
-        tools:context=".LoginActivity">
 
         <!-- App Logo -->
         <ImageView
             android:layout_width="120dp"
             android:layout_height="120dp"
+            android:src="@drawable/ic_launcher_background"
             android:layout_marginBottom="20dp"/>
 
         <!-- Email Input -->
@@ -71,7 +68,4 @@
             android:clickable="true"
             android:focusable="true"/>
 
-    </LinearLayout>
-
-
-</RelativeLayout>
+</LinearLayout>

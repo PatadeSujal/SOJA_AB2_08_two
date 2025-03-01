@@ -3314,7 +3314,10 @@ int id action_mode_bar_stub 0x7f090043
 int id action_mode_close_button 0x7f090044
 int id action_profile_to_home 0x7f090045
 int id action_profile_to_login 0x7f090046
+int id action_profile_to_signup 0x7f090232
 int id action_search 0x7f090047
+int id action_search_to_detailed 0x7f090238
+int id action_signup_to_home 0x7f090233
 int id action_text 0x7f090048
 int id actions 0x7f090049
 int id activity_chooser_view_content 0x7f09004a
@@ -3360,6 +3363,7 @@ int id browser_actions_menu_item_text 0x7f090071
 int id browser_actions_menu_items 0x7f090072
 int id browser_actions_menu_view 0x7f090073
 int id buttonPanel 0x7f090074
+int id buy 0x7f090239
 int id cache_measures 0x7f090075
 int id callMeasure 0x7f090076
 int id cancel_button 0x7f090077
@@ -3406,6 +3410,7 @@ int id decor_content_parent 0x7f09009f
 int id default_activity_button 0x7f0900a0
 int id deltaRelative 0x7f0900a1
 int id dependency_ordering 0x7f0900a2
+int id desc 0x7f09023a
 int id design_bottom_sheet 0x7f0900a3
 int id design_menu_item_action_area 0x7f0900a4
 int id design_menu_item_action_area_stub 0x7f0900a5
@@ -3450,6 +3455,7 @@ int id exitUntilCollapsed 0x7f0900cb
 int id expand_activities_button 0x7f0900cc
 int id expanded_menu 0x7f0900cd
 int id fade 0x7f0900ce
+int id farmer 0x7f09023b
 int id farmerListView 0x7f0900cf
 int id fill 0x7f0900d0
 int id fill_horizontal 0x7f0900d1
@@ -3586,8 +3592,10 @@ int id mtrl_picker_text_input_range_start 0x7f090152
 int id mtrl_picker_title_text 0x7f090153
 int id mtrl_view_tag_bottom_padding 0x7f090154
 int id multiply 0x7f090155
+int id name 0x7f09023c
 int id nav_chat 0x7f090156
 int id nav_controller_view_tag 0x7f090157
+int id nav_detailed 0x7f09023d
 int id nav_graph_xml 0x7f090158
 int id nav_home 0x7f090159
 int id nav_host_fragment 0x7f09015a
@@ -3595,6 +3603,7 @@ int id nav_host_fragment_container 0x7f09015b
 int id nav_login 0x7f09015c
 int id nav_profile 0x7f09015d
 int id nav_search 0x7f09015e
+int id nav_signup 0x7f090234
 int id navigation_bar_item_active_indicator_view 0x7f09015f
 int id navigation_bar_item_icon_container 0x7f090160
 int id navigation_bar_item_icon_view 0x7f090161
@@ -3602,6 +3611,7 @@ int id navigation_bar_item_labels_group 0x7f090162
 int id navigation_bar_item_large_label_view 0x7f090163
 int id navigation_bar_item_small_label_view 0x7f090164
 int id navigation_header_container 0x7f090165
+int id negotiate 0x7f09023e
 int id never 0x7f090166
 int id neverCompleteToEnd 0x7f090167
 int id neverCompleteToStart 0x7f090168
@@ -3644,10 +3654,12 @@ int id path 0x7f09018c
 int id pathRelative 0x7f09018d
 int id peekHeight 0x7f09018e
 int id percent 0x7f09018f
+int id pf_img 0x7f090235
 int id pin 0x7f090190
 int id position 0x7f090191
 int id postLayout 0x7f090192
 int id pressed 0x7f090193
+int id price 0x7f09023f
 int id progress_circular 0x7f090194
 int id progress_horizontal 0x7f090195
 int id radio 0x7f090196
@@ -3693,6 +3705,8 @@ int id shortcut 0x7f0901bd
 int id showCustom 0x7f0901be
 int id showHome 0x7f0901bf
 int id showTitle 0x7f0901c0
+int id signUp 0x7f090237
+int id signup 0x7f090236
 int id sin 0x7f0901c1
 int id skipCollapsed 0x7f0901c2
 int id skipped 0x7f0901c3
@@ -3943,11 +3957,13 @@ int layout design_text_input_end_icon 0x7f0c002e
 int layout design_text_input_start_icon 0x7f0c002f
 int layout fingerprint_dialog_layout 0x7f0c0030
 int layout fragment_chat 0x7f0c0031
+int layout fragment_detailed 0x7f0c0079
 int layout fragment_home 0x7f0c0032
 int layout fragment_login 0x7f0c0033
 int layout fragment_profile 0x7f0c0034
 int layout fragment_profile_unlogined 0x7f0c0035
 int layout fragment_search 0x7f0c0036
+int layout fragment_sign_up 0x7f0c0078
 int layout ime_base_split_test_activity 0x7f0c0037
 int layout ime_secondary_split_test_activity 0x7f0c0038
 int layout item_farmer 0x7f0c0039
