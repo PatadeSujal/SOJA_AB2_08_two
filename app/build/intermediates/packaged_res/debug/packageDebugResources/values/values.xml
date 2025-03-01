@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="dark_green">#228B22</color>
+    <color name="light_green">#DFFFD6</color>
+    <color name="white">#FFFFFFFF</color>
+    <string name="app_name">ConsumerApp</string>
+    <string name="gcm_defaultSenderId" translatable="false">829445494848</string>
+    <string name="google_api_key" translatable="false">AIzaSyAl7JheDyG2Zlj7Gt1B_IonFq54rrWQ95s</string>
+    <string name="google_app_id" translatable="false">1:829445494848:android:336b51d21796c032eae7a5</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyAl7JheDyG2Zlj7Gt1B_IonFq54rrWQ95s</string>
+    <string name="google_storage_bucket" translatable="false">farmerconsumerplatform-c144f.firebasestorage.app</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="project_id" translatable="false">farmerconsumerplatform-c144f</string>
+    <style name="Base.Theme.ConsumerApp" parent="Theme.Material3.Dark">
+        
+        
+    </style>
+    <style name="Theme.ConsumerApp" parent="Base.Theme.ConsumerApp"/>
+</resources>
