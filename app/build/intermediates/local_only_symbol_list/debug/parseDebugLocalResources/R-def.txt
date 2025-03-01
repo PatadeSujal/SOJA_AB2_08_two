@@ -13,6 +13,7 @@ drawable ic_launcher_foreground
 drawable input_background
 drawable profile
 drawable search
+id action_detailed_to_active_chat
 id action_login_to_home
 id action_profile_to_home
 id action_profile_to_login
@@ -23,6 +24,7 @@ id action_signup_to_home
 id bottomNav
 id buy
 id desc
+id ed_msg
 id et_email
 id et_password
 id farmer
@@ -34,7 +36,11 @@ id img_foodItem
 id login
 id logout
 id main
+id message
+id messageView
+id msg
 id name
+id nav_active_chat
 id nav_chat
 id nav_detailed
 id nav_graph.xml
@@ -47,6 +53,8 @@ id nav_signup
 id negotiate
 id pf_img
 id price
+id send
+id send_box
 id signUp
 id signup
 id tv_FoodItemName
@@ -54,6 +62,7 @@ id tv_farmer_name
 id tv_signup
 layout activity_main
 layout activity_splash_screen
+layout fragment_active_chat
 layout fragment_chat
 layout fragment_detailed
 layout fragment_home
@@ -64,6 +73,7 @@ layout fragment_search
 layout fragment_sign_up
 layout item_farmer
 layout item_fooditem
+layout message
 menu nav_items
 menu search_menu
 mipmap ic_launcher

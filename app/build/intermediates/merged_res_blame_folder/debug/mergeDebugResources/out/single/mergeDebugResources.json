@@ -20,16 +20,16 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\layout\\activity_main.xml"
     },
     {
-        "merged": "com.soja.consumerapp-debug-5:/layout_activity_main.xml.flat",
-        "source": "com.soja.consumerapp-main-7:/layout/activity_main.xml"
-    },
-    {
-        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\drawable_input_background.xml.flat",
-        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\drawable\\input_background.xml"
+        "merged": "com.soja.consumerapp-debug-5:/navigation_nav_graph.xml.flat",
+        "source": "com.soja.consumerapp-main-7:/navigation/nav_graph.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\menu_search_menu.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\menu\\search_menu.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\drawable_input_background.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\drawable\\input_background.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\raw_farmer.json.flat",
@@ -100,6 +100,10 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\drawable\\home.png"
     },
     {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\layout_message.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\layout\\message.xml"
+    },
+    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\mipmap-xxhdpi_ic_launcher_round.webp.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\mipmap-xxhdpi\\ic_launcher_round.webp"
     },
@@ -154,6 +158,10 @@
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\mipmap-anydpi-v26_ic_launcher_round.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\mipmap-anydpi-v26\\ic_launcher_round.xml"
+    },
+    {
+        "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\layout_fragment_active_chat.xml.flat",
+        "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\layout\\fragment_active_chat.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\drawable_btn_background.xml.flat",

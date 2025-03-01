@@ -14,6 +14,8 @@ import android.widget.EditText;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
+import com.google.firebase.auth.FirebaseUser;
+import com.google.firebase.auth.UserProfileChangeRequest;
 
 public class SignUpFragment extends Fragment {
     FirebaseAuth auth;
@@ -45,10 +47,19 @@ public class SignUpFragment extends Fragment {
 
                     if(task.isSuccessful())
                     {
-                        Toast.makeText(getContext(), "Signed Up!", Toast.LENGTH_SHORT).show();
-                        Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.action_signup_to_home);
-                        getFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+                        FirebaseUser user = auth.getCurrentUser();
+                        if (user != null)
+                        {
+                            UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
+                                    .setDisplayName("John Doe")  // Set Display Name
+                                    .build();
 
+                            user.updateProfile(profileUpdates);
+
+                            Toast.makeText(getContext(), "Signed Up!", Toast.LENGTH_SHORT).show();
+                            Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.action_signup_to_home);
+                            getFragmentManager().popBackStack(null, FragmentManager.POP_BACK_STACK_INCLUSIVE);
+                        }
                     }
                     else
                     {
@@ -56,9 +67,6 @@ public class SignUpFragment extends Fragment {
                     }
                 });
             }
-
-
-
         });
 
         return root;

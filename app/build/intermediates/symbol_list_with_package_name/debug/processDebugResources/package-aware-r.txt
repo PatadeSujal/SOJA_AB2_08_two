@@ -3305,6 +3305,7 @@ id action_bar_subtitle
 id action_bar_title
 id action_container
 id action_context_bar
+id action_detailed_to_active_chat
 id action_divider
 id action_image
 id action_login_to_home
@@ -3439,6 +3440,7 @@ id easeIn
 id easeInOut
 id easeOut
 id east
+id ed_msg
 id edge
 id edit_query
 id edit_text_id
@@ -3560,6 +3562,7 @@ id material_timepicker_view
 id material_value_index
 id matrix
 id message
+id messageView
 id middle
 id mini
 id month_grid
@@ -3569,6 +3572,7 @@ id month_navigation_next
 id month_navigation_previous
 id month_title
 id motion_base
+id msg
 id mtrl_anchor_parent
 id mtrl_calendar_day_selector_frame
 id mtrl_calendar_days_of_week
@@ -3594,6 +3598,7 @@ id mtrl_picker_title_text
 id mtrl_view_tag_bottom_padding
 id multiply
 id name
+id nav_active_chat
 id nav_chat
 id nav_controller_view_tag
 id nav_detailed
@@ -3700,6 +3705,8 @@ id search_voice_btn
 id select_dialog_listview
 id selected
 id selection_type
+id send
+id send_box
 id sharedValueSet
 id sharedValueUnset
 id shortcut
@@ -3957,6 +3964,7 @@ layout design_navigation_menu_item
 layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fingerprint_dialog_layout
+layout fragment_active_chat
 layout fragment_chat
 layout fragment_detailed
 layout fragment_home
@@ -3988,6 +3996,7 @@ layout material_time_input
 layout material_timepicker
 layout material_timepicker_dialog
 layout material_timepicker_textinput_display
+layout message
 layout mtrl_alert_dialog
 layout mtrl_alert_dialog_actions
 layout mtrl_alert_dialog_title

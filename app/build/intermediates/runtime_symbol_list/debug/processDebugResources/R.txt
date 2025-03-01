@@ -3304,6 +3304,7 @@ int id action_bar_subtitle 0x7f090039
 int id action_bar_title 0x7f09003a
 int id action_container 0x7f09003b
 int id action_context_bar 0x7f09003c
+int id action_detailed_to_active_chat 0x7f090245
 int id action_divider 0x7f09003d
 int id action_image 0x7f09003e
 int id action_login_to_home 0x7f09003f
@@ -3438,6 +3439,7 @@ int id easeIn 0x7f0900ba
 int id easeInOut 0x7f0900bb
 int id easeOut 0x7f0900bc
 int id east 0x7f0900bd
+int id ed_msg 0x7f090240
 int id edge 0x7f0900be
 int id edit_query 0x7f0900bf
 int id edit_text_id 0x7f0900c0
@@ -3559,6 +3561,7 @@ int id material_timepicker_view 0x7f090131
 int id material_value_index 0x7f090132
 int id matrix 0x7f090133
 int id message 0x7f090134
+int id messageView 0x7f090241
 int id middle 0x7f090135
 int id mini 0x7f090136
 int id month_grid 0x7f090137
@@ -3568,6 +3571,7 @@ int id month_navigation_next 0x7f09013a
 int id month_navigation_previous 0x7f09013b
 int id month_title 0x7f09013c
 int id motion_base 0x7f09013d
+int id msg 0x7f090242
 int id mtrl_anchor_parent 0x7f09013e
 int id mtrl_calendar_day_selector_frame 0x7f09013f
 int id mtrl_calendar_days_of_week 0x7f090140
@@ -3593,6 +3597,7 @@ int id mtrl_picker_title_text 0x7f090153
 int id mtrl_view_tag_bottom_padding 0x7f090154
 int id multiply 0x7f090155
 int id name 0x7f09023c
+int id nav_active_chat 0x7f090246
 int id nav_chat 0x7f090156
 int id nav_controller_view_tag 0x7f090157
 int id nav_detailed 0x7f09023d
@@ -3699,6 +3704,8 @@ int id search_voice_btn 0x7f0901b7
 int id select_dialog_listview 0x7f0901b8
 int id selected 0x7f0901b9
 int id selection_type 0x7f0901ba
+int id send 0x7f090243
+int id send_box 0x7f090244
 int id sharedValueSet 0x7f0901bb
 int id sharedValueUnset 0x7f0901bc
 int id shortcut 0x7f0901bd
@@ -3956,6 +3963,7 @@ int layout design_navigation_menu_item 0x7f0c002d
 int layout design_text_input_end_icon 0x7f0c002e
 int layout design_text_input_start_icon 0x7f0c002f
 int layout fingerprint_dialog_layout 0x7f0c0030
+int layout fragment_active_chat 0x7f0c007a
 int layout fragment_chat 0x7f0c0031
 int layout fragment_detailed 0x7f0c0079
 int layout fragment_home 0x7f0c0032
@@ -3987,6 +3995,7 @@ int layout material_time_input 0x7f0c004a
 int layout material_timepicker 0x7f0c004b
 int layout material_timepicker_dialog 0x7f0c004c
 int layout material_timepicker_textinput_display 0x7f0c004d
+int layout message 0x7f0c007b
 int layout mtrl_alert_dialog 0x7f0c004e
 int layout mtrl_alert_dialog_actions 0x7f0c004f
 int layout mtrl_alert_dialog_title 0x7f0c0050

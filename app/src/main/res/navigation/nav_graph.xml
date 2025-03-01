@@ -76,8 +76,21 @@
         android:id="@+id/nav_detailed"
         android:label="Detailed"
         android:name="com.soja.consumerapp.DetailedFragment"
-        tools:layout="@layout/fragment_detailed"
-        />
+        tools:layout="@layout/fragment_detailed">
+
+        <action
+            android:id="@+id/action_detailed_to_active_chat"
+            app:destination="@id/nav_active_chat"/>
+
+    </fragment>
+
+    <fragment
+        android:id="@+id/nav_active_chat"
+        android:label="Chat"
+        android:name="com.soja.consumerapp.ActiveChatFragment"
+        tools:layout="@layout/fragment_active_chat">
+
+    </fragment>
 
 
 </navigation>
