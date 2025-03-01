@@ -4,7 +4,7 @@
             "outputFile": "com.soja.consumerapp-mergeDebugResources-3:/values-h320dp-port-v13/values-h320dp-port-v13.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Admin\\.gradle\\caches\\8.9\\transforms\\a7c3b6530d379ca042173f44955c74eb\\transformed\\material-1.12.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
+                    "source": "C:\\Users\\Admin\\.gradle\\caches\\8.9\\transforms\\afbafd7c2645203dfe1db1fa8e6ae659\\transformed\\material-1.12.0\\res\\values-h320dp-port-v13\\values-h320dp-port-v13.xml",
                     "from": {
                         "startLines": "2",
                         "startColumns": "4",

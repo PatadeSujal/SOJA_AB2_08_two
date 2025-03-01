@@ -4,7 +4,7 @@
             "outputFile": "com.soja.consumerapp-mergeDebugResources-3:/values-xlarge-v4/values-xlarge-v4.xml",
             "map": [
                 {
-                    "source": "C:\\Users\\Admin\\.gradle\\caches\\8.9\\transforms\\a2473cc2dd2e6dedc19fa1cfe5b5223f\\transformed\\appcompat-1.7.0\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
+                    "source": "C:\\Users\\Admin\\.gradle\\caches\\8.9\\transforms\\4efc2404d8ba5b99ae6e9b25a996a886\\transformed\\appcompat-1.7.0\\res\\values-xlarge-v4\\values-xlarge-v4.xml",
                     "from": {
                         "startLines": "2,3,4,5,6,7",
                         "startColumns": "4,4,4,4,4,4",

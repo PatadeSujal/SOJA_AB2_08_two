@@ -48,7 +48,9 @@ dependencies {
     implementation(libs.googleid)
     implementation(libs.firebase.firestore)
     testImplementation(libs.junit)
+    implementation(libs.glide);
     androidTestImplementation(libs.ext.junit)
     androidTestImplementation(libs.espresso.core)
-    androidTestImplementation("androidx.recyclerview:recyclerview:1.2.1")
+    androidTestImplementation(libs.recyclerview)
+
 }

@@ -13,17 +13,28 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Toast;
+
 import androidx.appcompat.widget.SearchView;
 import androidx.recyclerview.widget.GridLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.google.firebase.firestore.FirebaseFirestore;
+import com.google.firebase.firestore.QueryDocumentSnapshot;
+
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Map;
 
 public class SearchFragment extends Fragment {
 
     RecyclerView foodItemList;
+    FirebaseFirestore firestore;
+    private FarmerAdapter.OnFarmerClickListener listener;
 
+    public interface OnFarmerClickListener {
+        void onFarmerClick(FarmerModel farmer);
+    }
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
@@ -66,13 +77,27 @@ public class SearchFragment extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View root =  inflater.inflate(R.layout.fragment_search, container, false);
+        firestore = FirebaseFirestore.getInstance();
 
         foodItemList = root.findViewById(R.id.foodItemList);
         List<FoodItemModel> foodList = new ArrayList<>();
-        foodList.add(new FoodItemModel("Apple","", "100","it is sweet"));
-        foodList.add(new FoodItemModel("Banana","", "120","it is sweet"));
 
-        FoodItemAdapter adapter = new FoodItemAdapter(foodList);
+
+        FoodItemAdapter adapter = new FoodItemAdapter(foodList, getContext(), foodItem-> {
+                Toast.makeText(getContext(), "Clicked" + foodItem.getName(), Toast.LENGTH_SHORT).show();
+        });
+
+        firestore.collection("MarketPlace").get().addOnCompleteListener(task->{
+            if(task.isSuccessful())
+            {
+                for(QueryDocumentSnapshot document : task.getResult())
+                {
+                    Map<String,Object> data = document.getData();
+                    foodList.add(new FoodItemModel(data.get("name").toString(),"", data.get("pricePerKg").toString(),"it is sweet"));
+                    adapter.notifyDataSetChanged();
+                }
+            }
+        });
 
         foodItemList.setLayoutManager(new GridLayoutManager(getContext(),2));
         foodItemList.setAdapter(adapter);
