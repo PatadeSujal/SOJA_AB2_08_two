@@ -16,6 +16,7 @@ drawable search
 id action_login_to_home
 id action_profile_to_home
 id action_profile_to_login
+id action_search
 id bottomNav
 id et_email
 id et_password
@@ -43,6 +44,7 @@ layout fragment_profile_unlogined
 layout fragment_search
 layout item_farmer
 menu nav_items
+menu search_menu
 mipmap ic_launcher
 mipmap ic_launcher_round
 navigation nav_graph
