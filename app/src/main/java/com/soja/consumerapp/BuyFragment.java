@@ -67,7 +67,7 @@ public class BuyFragment extends Fragment {
     }
 
     private void loadUserData() {
-        DocumentReference docRef = db.collection("SellerIdentity").document(userEmail);
+        DocumentReference docRef = db.collection("BuyerIdentity").document(userEmail);
         docRef.get().addOnSuccessListener(documentSnapshot -> {
             if (documentSnapshot.exists()) {
                 // Fill EditTexts with stored data
