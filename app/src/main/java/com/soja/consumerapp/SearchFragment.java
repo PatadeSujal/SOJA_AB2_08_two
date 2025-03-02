@@ -135,13 +135,18 @@ public class SearchFragment extends Fragment {
                             List<String> productData = (List<String>) value;
 
                             if (productData.size() >= 4) {
+
+                                int underScoreIndex = document.getId().lastIndexOf('_');
+                                String sellerEmail = replaceCharAt(document.getId(), underScoreIndex, '.');
+
                                 foodList.add(new FoodItemModel(
                                         productData.get(0), // Name
                                         productData.get(1), // Description
                                         productData.get(2), // Price
                                         productData.get(3),  // Image URL
-                                        document.getId()
+                                        sellerEmail
                                 ));
+                                Toast.makeText(getContext(),document.getId(), Toast.LENGTH_SHORT);
                             }
                         }
                     }
@@ -156,7 +161,15 @@ public class SearchFragment extends Fragment {
         return root;
     }
 
+    public static String replaceCharAt(String str, int index, char newChar) {
+        if (index < 0 || index >= str.length()) {
+            throw new IllegalArgumentException("Index out of bounds");
+        }
 
+        StringBuilder sb = new StringBuilder(str);
+        sb.setCharAt(index, newChar);
+        return sb.toString();
+    }
     public void gotoDetailedView(FoodItemModel fm)
     {
         Bundle data = new Bundle();

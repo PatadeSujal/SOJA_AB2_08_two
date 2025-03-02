@@ -82,6 +82,10 @@
             android:id="@+id/action_detailed_to_active_chat"
             app:destination="@id/nav_active_chat"/>
 
+        <action
+            android:id="@+id/action_detailed_to_buy"
+            app:destination="@id/nav_buy"/>
+
     </fragment>
 
     <fragment
@@ -92,5 +96,13 @@
 
     </fragment>
 
+    <fragment
+        android:id="@+id/nav_buy"
+        android:label="Buy"
+        android:name="com.soja.consumerapp.BuyFragment"
+        tools:layout="@layout/fragment_buy">
+
+
+    </fragment>
 
 </navigation>

@@ -20,7 +20,7 @@ import com.google.firebase.auth.UserProfileChangeRequest;
 public class SignUpFragment extends Fragment {
     FirebaseAuth auth;
     Button signup;
-    EditText email, pass;
+    EditText email, pass, name;
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -31,13 +31,15 @@ public class SignUpFragment extends Fragment {
         signup = root.findViewById(R.id.signUp);
         email = root.findViewById(R.id.et_email);
         pass = root.findViewById(R.id.et_password);
+        name = root.findViewById(R.id.et_name);
 
         signup.setOnClickListener(v->{
 
             String txt_Email = email.getText().toString();
             String txt_Pass = pass.getText().toString();
+            String txt_Name = name.getText().toString();
 
-            if(txt_Email.isEmpty() || txt_Pass.isEmpty())
+            if(txt_Email.isEmpty() || txt_Pass.isEmpty() || txt_Name.isEmpty())
             {
                 Toast.makeText(getContext(), "Please fill all the fields!", Toast.LENGTH_SHORT).show();
             }
@@ -51,7 +53,7 @@ public class SignUpFragment extends Fragment {
                         if (user != null)
                         {
                             UserProfileChangeRequest profileUpdates = new UserProfileChangeRequest.Builder()
-                                    .setDisplayName("John Doe")  // Set Display Name
+                                    .setDisplayName(txt_Name)  // Set Display Name
                                     .build();
 
                             user.updateProfile(profileUpdates);

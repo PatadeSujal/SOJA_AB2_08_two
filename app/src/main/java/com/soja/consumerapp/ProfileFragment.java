@@ -11,6 +11,7 @@ import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.Button;
+import android.widget.TextView;
 import android.widget.Toast;
 
 import com.google.firebase.auth.FirebaseAuth;
@@ -47,6 +48,9 @@ public class ProfileFragment extends Fragment {
             root = inflater.inflate(R.layout.fragment_profile, container, false);
 
             Button logout = root.findViewById(R.id.logout);
+            TextView name = root.findViewById(R.id.name);
+
+            name.setText(auth.getCurrentUser().getDisplayName());
 
             logout.setOnClickListener(v->{
 

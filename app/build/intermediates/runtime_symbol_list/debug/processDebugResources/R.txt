@@ -3305,6 +3305,7 @@ int id action_bar_title 0x7f09003a
 int id action_container 0x7f09003b
 int id action_context_bar 0x7f09003c
 int id action_detailed_to_active_chat 0x7f090245
+int id action_detailed_to_buy 0x7f09024f
 int id action_divider 0x7f09003d
 int id action_image 0x7f09003e
 int id action_login_to_home 0x7f09003f
@@ -3323,6 +3324,7 @@ int id action_text 0x7f090048
 int id actions 0x7f090049
 int id activity_chooser_view_content 0x7f09004a
 int id add 0x7f09004b
+int id address 0x7f090249
 int id adjust_height 0x7f09004c
 int id adjust_width 0x7f09004d
 int id alertTitle 0x7f09004e
@@ -3381,6 +3383,7 @@ int id checkbox 0x7f090081
 int id checked 0x7f090082
 int id chronometer 0x7f090083
 int id circle_center 0x7f090084
+int id city 0x7f09024a
 int id clear_text 0x7f090085
 int id clip_horizontal 0x7f090086
 int id clip_vertical 0x7f090087
@@ -3452,6 +3455,7 @@ int id enterAlways 0x7f0900c6
 int id enterAlwaysCollapsed 0x7f0900c7
 int id escape 0x7f0900c8
 int id et_email 0x7f0900c9
+int id et_name 0x7f090247
 int id et_password 0x7f0900ca
 int id exitUntilCollapsed 0x7f0900cb
 int id expand_activities_button 0x7f0900cc
@@ -3598,6 +3602,7 @@ int id mtrl_view_tag_bottom_padding 0x7f090154
 int id multiply 0x7f090155
 int id name 0x7f09023c
 int id nav_active_chat 0x7f090246
+int id nav_buy 0x7f090250
 int id nav_chat 0x7f090156
 int id nav_controller_view_tag 0x7f090157
 int id nav_detailed 0x7f09023d
@@ -3660,11 +3665,15 @@ int id pathRelative 0x7f09018d
 int id peekHeight 0x7f09018e
 int id percent 0x7f09018f
 int id pf_img 0x7f090235
+int id phone 0x7f09024b
 int id pin 0x7f090190
+int id pincode 0x7f09024c
 int id position 0x7f090191
 int id postLayout 0x7f090192
 int id pressed 0x7f090193
 int id price 0x7f09023f
+int id proceedBtn 0x7f09024d
+int id profileImg 0x7f090248
 int id progress_circular 0x7f090194
 int id progress_horizontal 0x7f090195
 int id radio 0x7f090196
@@ -3742,6 +3751,7 @@ int id start 0x7f0901d9
 int id startHorizontal 0x7f0901da
 int id startToEnd 0x7f0901db
 int id startVertical 0x7f0901dc
+int id state 0x7f09024e
 int id staticLayout 0x7f0901dd
 int id staticPostLayout 0x7f0901de
 int id stop 0x7f0901df
@@ -3964,6 +3974,7 @@ int layout design_text_input_end_icon 0x7f0c002e
 int layout design_text_input_start_icon 0x7f0c002f
 int layout fingerprint_dialog_layout 0x7f0c0030
 int layout fragment_active_chat 0x7f0c007a
+int layout fragment_buy 0x7f0c007c
 int layout fragment_chat 0x7f0c0031
 int layout fragment_detailed 0x7f0c0079
 int layout fragment_home 0x7f0c0032

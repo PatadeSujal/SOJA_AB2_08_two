@@ -20,6 +20,7 @@ import com.google.firebase.firestore.FirebaseFirestore;
 
 import java.util.ArrayList;
 import java.util.Collections;
+import java.util.Comparator;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
@@ -38,7 +39,7 @@ public class ActiveChatFragment extends Fragment {
         View root =  inflater.inflate(R.layout.fragment_active_chat, container, false);
         auth = FirebaseAuth.getInstance();
         db = FirebaseFirestore.getInstance();
-        Bundle data = getArguments();
+        Bundle bundle = getArguments();
 
         messageViewList = root.findViewById(R.id.messageView);
         send = root.findViewById(R.id.send);
@@ -46,83 +47,94 @@ public class ActiveChatFragment extends Fragment {
         List<MessageModel> messageList = new ArrayList<>();
 
         MessageAdapter adapter = new MessageAdapter(messageList);
-        messageViewList.setLayoutManager(new LinearLayoutManager(getContext()));
+        LinearLayoutManager layoutManager = new LinearLayoutManager(getContext(), LinearLayoutManager.VERTICAL, false);
+        messageViewList.setLayoutManager(layoutManager);
         messageViewList.setAdapter(adapter);
 
-        String chatId = auth.getCurrentUser().getEmail() + "x" + data.getString("seller_email");
+        String chatId = bundle.getString("seller_email") + "x" + auth.getCurrentUser().getEmail()  ;
         DocumentReference docRef = db.collection("Chat").document(chatId);
 
 
-        docRef.get().addOnSuccessListener(documentSnapshot -> {
+        docRef.addSnapshotListener((documentSnapshot, error) -> {
+            if (error != null) {
+                return;
+            }
 
-                if (!documentSnapshot.exists()) {
-                    // **If chat document does not exist, create it with the 0th message**
-                    Map<String, Object> firstMessage = new HashMap<>();
-                    firstMessage.put("sender", auth.getCurrentUser().getDisplayName());
-                    firstMessage.put("msg", "Hello! This is the start of our chat.");
-                    firstMessage.put("Timestamp", Timestamp.now());
+            // If document doesn't exist, create an empty document.
+            if (documentSnapshot == null || !documentSnapshot.exists()) {
+                docRef.set(new HashMap<>()).addOnSuccessListener(unused -> {});
+                // Clear list in case there are old messages
+                messageList.clear();
+                adapter.notifyDataSetChanged();
+                return;
+            }
 
-                    Map<String, Object> chatData = new HashMap<>();
-                    chatData.put("0", firstMessage); // Insert the 0th message
+            // Document exists. Retrieve its data.
+            Map<String, Object> data = documentSnapshot.getData();
+            List<MessageModel> tempList = new ArrayList<>();
 
-                    docRef.set(chatData);
-                }
-            /*
-
-                Map<String, Object> map = documentSnapshot.getData();
-
-                if (map != null && !map.isEmpty()) {
-                    // Extract numeric keys
-                    List<Integer> keys = new ArrayList<>();
-                    Toast.makeText(getContext(), "here!!", Toast.LENGTH_SHORT).show();
-                    for (String key : map.keySet()) {
-                        Map obj = (Map) map.get(key);
-
-                        messageList.add(new MessageModel((String)obj.get("sender"),(String) obj.get("msg"),(Timestamp)obj.get("Timestamp")));
-
-                        try {
-                            keys.add(Integer.parseInt(key)); // Convert string keys to integers
-                        } catch (NumberFormatException ignored) {} // Ignore non-numeric keys
+            if (data != null && !data.isEmpty()) {
+                for (String key : data.keySet()) {
+                    Object obj = data.get(key);
+                    if (obj instanceof Map) {
+                        Map messageMap = (Map) obj;
+                        String sender = (String) messageMap.get("sender");
+                        String msg = (String) messageMap.get("msg");
+                        Timestamp ts = (Timestamp) messageMap.get("Timestamp");
+                        tempList.add(new MessageModel(sender, msg, ts));
                     }
-
-                    Collections.sort(messageList, (m1, m2) -> {
-                        Long t1 = m1.getTime().toDate().getTime();
-                        Long t2 =m2.getTime().toDate().getTime();
-                        return Long.compare(t1, t2);
-                    });
-
-                    // Find the highest key
-                    int newKey = keys.isEmpty() ? 0 : Collections.max(keys) + 1;
-
-                    // Add a new map at the next index
-                    Map<String, Object> newProduct = new HashMap<>();
-                    newProduct.put("sender", auth.getCurrentUser().getDisplayName());
-                    newProduct.put("msg", "50");
-                    newProduct.put("Timestamp", Timestamp.now());
-
-                    // Add the new map to Firestore
-                    docRef.update(String.valueOf(newKey), newProduct);
                 }
-                else
-                {
-                    Map<String, Object> newProduct = new HashMap<>();
-                    newProduct.put("sender", auth.getCurrentUser().getDisplayName());
-                    newProduct.put("msg", "50");
-                    newProduct.put("Timestamp", Timestamp.now());
-                    Toast.makeText(getContext(), auth.getCurrentUser().getDisplayName(), Toast.LENGTH_SHORT).show();
-                    // Add the new map to Firestore
-                    docRef.update(String.valueOf(0), newProduct);
-                }
+            }
 
-                */
+            // Sort messages by timestamp in ascending order.
+            Collections.sort(tempList, (m1, m2) -> m1.getTime().compareTo(m2.getTime()));
 
+            // Clear the current list and update it with the new sorted list.
+            messageList.clear();
+            messageList.addAll(tempList);
+            adapter.notifyDataSetChanged();
+
+            // Optionally, scroll the RecyclerView to the last message.
+            messageViewList.scrollToPosition(messageList.size() - 1);
         });
+
 
         send.setOnClickListener(v->{
             messageList.add(new MessageModel(auth.getCurrentUser().getDisplayName(), inp.getText().toString(), Timestamp.now()));
             adapter.notifyDataSetChanged();
+            sendMessage(chatId, inp.getText().toString());
         });
 
         return root;
+    }
+
+    public void sendMessage(String chatId, String messageText) {
+        DocumentReference docRef = db.collection("Chat").document(chatId);
+
+        docRef.get().addOnSuccessListener(documentSnapshot -> {
+            int newKey = 0; // Default index for the first message
+
+            if (documentSnapshot.exists() && documentSnapshot.getData() != null) {
+                // Extract numeric keys from existing messages
+                List<Integer> keys = new ArrayList<>();
+                for (String key : documentSnapshot.getData().keySet()) {
+                    try {
+                        keys.add(Integer.parseInt(key)); // Convert string keys to integers
+                    } catch (NumberFormatException ignored) {}
+                }
+                if (!keys.isEmpty()) {
+                    newKey = Collections.max(keys) + 1; // Find next available index
+                }
+            }
+
+            // Create a new message map
+            Map<String, Object> newMessage = new HashMap<>();
+            newMessage.put("sender", auth.getCurrentUser().getDisplayName());
+            newMessage.put("msg", messageText);
+            newMessage.put("Timestamp", Timestamp.now());
+
+            // Add the message to Firestore at the next index
+            docRef.update(String.valueOf(newKey), newMessage);
+        });
     }
 }

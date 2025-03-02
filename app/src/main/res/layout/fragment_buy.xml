@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp"
+    android:orientation="vertical"
+    android:background="#1B3B1A">  <!-- Deep natural green background -->
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Enter Your Details"
+        android:textColor="#A8E6A3"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_gravity="center"
+        android:paddingBottom="16dp"/>
+
+    <EditText
+        android:id="@+id/state"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="State"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#A8E6A3"
+        android:backgroundTint="#4CAF50"
+        android:padding="12dp"/>
+
+    <EditText
+        android:id="@+id/city"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="City"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#A8E6A3"
+        android:backgroundTint="#4CAF50"
+        android:padding="12dp"/>
+
+    <EditText
+        android:id="@+id/address"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Address"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#A8E6A3"
+        android:backgroundTint="#4CAF50"
+        android:padding="12dp"/>
+
+    <EditText
+        android:id="@+id/pincode"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Pincode"
+        android:inputType="number"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#A8E6A3"
+        android:backgroundTint="#4CAF50"
+        android:padding="12dp"/>
+
+    <EditText
+        android:id="@+id/phone"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Phone Number"
+        android:inputType="phone"
+        android:textColor="#FFFFFF"
+        android:textColorHint="#A8E6A3"
+        android:backgroundTint="#4CAF50"
+        android:padding="12dp"/>
+
+    <Button
+        android:id="@+id/proceedBtn"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Proceed"
+        android:textColor="#FFFFFF"
+        android:backgroundTint="#388E3C"
+    android:layout_marginTop="30dp"
+    android:padding="12dp"
+    android:textStyle="bold"/>
+</LinearLayout>

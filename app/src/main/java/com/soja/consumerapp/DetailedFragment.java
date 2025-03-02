@@ -58,6 +58,10 @@ public class DetailedFragment extends Fragment {
             Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.action_detailed_to_active_chat,bundle);
         });
 
+        buy.setOnClickListener(v->{
+            Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.action_detailed_to_buy);
+        });
+
 
         return root;
     }

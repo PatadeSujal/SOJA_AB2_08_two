@@ -3306,6 +3306,7 @@ id action_bar_title
 id action_container
 id action_context_bar
 id action_detailed_to_active_chat
+id action_detailed_to_buy
 id action_divider
 id action_image
 id action_login_to_home
@@ -3324,6 +3325,7 @@ id action_text
 id actions
 id activity_chooser_view_content
 id add
+id address
 id adjust_height
 id adjust_width
 id alertTitle
@@ -3382,6 +3384,7 @@ id checkbox
 id checked
 id chronometer
 id circle_center
+id city
 id clear_text
 id clip_horizontal
 id clip_vertical
@@ -3453,6 +3456,7 @@ id enterAlways
 id enterAlwaysCollapsed
 id escape
 id et_email
+id et_name
 id et_password
 id exitUntilCollapsed
 id expand_activities_button
@@ -3599,6 +3603,7 @@ id mtrl_view_tag_bottom_padding
 id multiply
 id name
 id nav_active_chat
+id nav_buy
 id nav_chat
 id nav_controller_view_tag
 id nav_detailed
@@ -3661,11 +3666,15 @@ id pathRelative
 id peekHeight
 id percent
 id pf_img
+id phone
 id pin
+id pincode
 id position
 id postLayout
 id pressed
 id price
+id proceedBtn
+id profileImg
 id progress_circular
 id progress_horizontal
 id radio
@@ -3743,6 +3752,7 @@ id start
 id startHorizontal
 id startToEnd
 id startVertical
+id state
 id staticLayout
 id staticPostLayout
 id stop
@@ -3965,6 +3975,7 @@ layout design_text_input_end_icon
 layout design_text_input_start_icon
 layout fingerprint_dialog_layout
 layout fragment_active_chat
+layout fragment_buy
 layout fragment_chat
 layout fragment_detailed
 layout fragment_home
