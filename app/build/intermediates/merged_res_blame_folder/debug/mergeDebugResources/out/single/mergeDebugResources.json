@@ -20,6 +20,10 @@
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\layout\\activity_main.xml"
     },
     {
+        "merged": "com.soja.consumerapp-debug-5:/navigation_nav_graph.xml.flat",
+        "source": "com.soja.consumerapp-main-7:/navigation/nav_graph.xml"
+    },
+    {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\menu_search_menu.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\menu\\search_menu.xml"
     },
@@ -122,10 +126,6 @@
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\layout_item_fooditem.xml.flat",
         "source": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-main-7:\\layout\\item_fooditem.xml"
-    },
-    {
-        "merged": "com.soja.consumerapp-debug-5:/layout_fragment_detailed.xml.flat",
-        "source": "com.soja.consumerapp-main-7:/layout/fragment_detailed.xml"
     },
     {
         "merged": "C:\\Users\\Admin\\.gradle\\daemon\\8.9\\com.soja.consumerapp-debug-5:\\drawable_chat.png.flat",

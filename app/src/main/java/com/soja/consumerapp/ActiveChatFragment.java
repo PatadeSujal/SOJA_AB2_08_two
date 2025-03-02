@@ -100,7 +100,7 @@ public class ActiveChatFragment extends Fragment {
 
 
         send.setOnClickListener(v->{
-            messageList.add(new MessageModel(auth.getCurrentUser().getDisplayName(), inp.getText().toString(), Timestamp.now()));
+            messageList.add(new MessageModel(auth.getCurrentUser().getEmail(), inp.getText().toString(), Timestamp.now()));
             adapter.notifyDataSetChanged();
             sendMessage(chatId, inp.getText().toString());
         });
@@ -129,7 +129,7 @@ public class ActiveChatFragment extends Fragment {
 
             // Create a new message map
             Map<String, Object> newMessage = new HashMap<>();
-            newMessage.put("sender", auth.getCurrentUser().getDisplayName());
+            newMessage.put("sender", auth.getCurrentUser().getEmail());
             newMessage.put("msg", messageText);
             newMessage.put("Timestamp", Timestamp.now());
 

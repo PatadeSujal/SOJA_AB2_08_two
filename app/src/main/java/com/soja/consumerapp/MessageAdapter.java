@@ -43,7 +43,7 @@ public class MessageAdapter extends RecyclerView.Adapter<MessageAdapter.MessageV
 
         LinearLayout.LayoutParams params = (LinearLayout.LayoutParams) holder.text.getLayoutParams();
 
-        if (m.getSender().equals(auth.getCurrentUser().getDisplayName())) {
+        if (m.getSender().equals(auth.getCurrentUser().getEmail())) {
             params.gravity = Gravity.END; // Align to right for the sender
             holder.text.setBackgroundResource(R.drawable.btn_background);
         } else {

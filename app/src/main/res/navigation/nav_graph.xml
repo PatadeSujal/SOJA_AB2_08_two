@@ -28,8 +28,13 @@
         android:id="@+id/nav_chat"
         android:label="Chat"
         android:name="com.soja.consumerapp.ChatFragment"
-        tools:layout="@layout/fragment_chat"
-        />
+        tools:layout="@layout/fragment_chat">
+
+        <action
+            android:id="@+id/action_chat_to_active_chat"
+            app:destination="@id/nav_active_chat"/>
+
+    </fragment>
 
     <fragment
         android:id="@+id/nav_profile"

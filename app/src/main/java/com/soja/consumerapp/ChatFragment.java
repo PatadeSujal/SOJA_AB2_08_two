@@ -3,6 +3,7 @@ package com.soja.consumerapp;
 import android.os.Bundle;
 
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
@@ -40,7 +41,10 @@ public class ChatFragment extends Fragment {
         farmerAdapter = new FarmerAdapter(MainActivity.FarmerChatList, new FarmerAdapter.OnFarmerClickListener() {
             @Override
             public void onFarmerClick(FarmerModel farmer) {
-                Toast.makeText(getContext(), "you clicked " + farmer.getName(), Toast.LENGTH_SHORT).show();
+                Bundle bundle = new Bundle();
+                bundle.putString("seller", farmer.getName());
+                bundle.putString("seller_email", farmer.getName());
+                Navigation.findNavController(getActivity(), R.id.nav_host_fragment).navigate(R.id.action_chat_to_active_chat,bundle);
             }
         });
 
